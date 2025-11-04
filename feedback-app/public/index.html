@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback Form</title>
+</head>
+<body>
+  <h2>Submit Your Feedback</h2>
+  <form action="/submit-feedback" method="POST">
+    <label>Name:</label>
+    <input type="text" name="name" required><br><br>
+
+    <label>Rating (1–5):</label>
+    <input type="number" name="rating" min="1" max="5" required><br><br>
+
+    <label>Comments:</label><br>
+    <textarea name="comments"></textarea><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

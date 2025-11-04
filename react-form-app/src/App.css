@@ -1,0 +1,37 @@
+:root{
+  --bg:#f6f8fb; --card:#fff; --accent:#007bff; --muted:#6b7280; --danger:#d64545;
+}
+*{box-sizing:border-box}
+body,html,#root{height:100%;margin:0;font-family:Inter,Arial,Helvetica,sans-serif}
+.page{min-height:100%;background:var(--bg);padding:28px}
+.header{text-align:center;margin-bottom:20px}
+.header h1{margin:0;color:#122}
+.header p{color:var(--muted);margin:6px 0 0}
+
+.main{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 320px;gap:20px}
+@media(max-width:900px){.main{grid-template-columns:1fr;padding:0 16px}}
+
+.form{background:var(--card);padding:20px;border-radius:10px;box-shadow:0 6px 20px rgba(12,22,39,0.06)}
+.form label{display:block;margin-bottom:12px;font-weight:600;color:#222}
+.form input[type="text"],.form input[type="email"],.form input[type="tel"],.form select,.form textarea{
+  width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef;margin-top:6px;font-size:14px;
+}
+.form textarea{resize:vertical}
+.error{display:block;color:var(--danger);font-size:13px;margin-top:6px}
+
+.checkbox{display:flex;gap:10px;align-items:center;margin:12px 0;font-weight:600}
+.actions{display:flex;gap:10px;align-items:center;margin-top:10px}
+.btn{padding:10px 14px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);background:white;cursor:pointer}
+.btn.primary{background:var(--accent);color:white;border:none}
+.btn:hover{opacity:0.95}
+
+.aside{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 20px rgba(12,22,39,0.04)}
+.aside h3{margin-top:0}
+.aside p{color:var(--muted)}
+
+/* Modal */
+.modal-overlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.4);z-index:1200}
+.modal{width:90%;max-width:520px;background:var(--card);padding:20px;border-radius:10px;box-shadow:0 20px 60px rgba(12,22,39,0.35);position:relative}
+.modal h2{margin-top:0;color:#1f8f4b}
+.modal-close{position:absolute;right:10px;top:8px;background:transparent;border:none;font-size:22px;cursor:pointer}
+.modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:16px}
